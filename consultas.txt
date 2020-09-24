@@ -1,0 +1,4 @@
+SELECT COUNT(*) AS total FROM flights;
+SELECT Origin, AVG(ArrDelay) AS prom_arribades, AVG(DepDelay) AS prom_sortides FROM flights GROUP BY Origin ORDER BY Origin;
+SELECT Origin, colYear, colMonth, AVG(ArrDelay) AS prom_arribades FROM flights GROUP BY Origin, ColYear, ColMonth ORDER BY Origin, colYear, colMonth;
+SELECT City, colYear, colMonth, AVG(ArrDelay) AS prom_arribades FROM flights F JOIN usairports U ON F.Origin = U.IATA GROUP BY City, colYear, colMonth ORDER BY City, colYear, colMonth;
